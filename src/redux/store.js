@@ -10,7 +10,7 @@ export const history = createBrowserHistory();
 export default function configureAppStore(preloadedState) {
     const store = configureStore({
         reducer: { router: connectRouter(history), ...rootReducer },
-        middleware: [thunk, routerMiddleware(history), ...getDefaultMiddleware()],
+        middleware: [thunk, routerMiddleware(history), ...getDefaultMiddleware({ serializableCheck: false })],
         devTools: process.env.NODE_ENV !== 'production',
         preloadedState
     });
