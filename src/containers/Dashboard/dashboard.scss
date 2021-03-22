@@ -1,0 +1,12 @@
+
+@import '../../styles/utils/_variables';
+@import '../../styles/utils/_mixins';
+
+.dashboard {
+    height: 100%;
+
+    &__wrapper {
+        display: flex;
+        height: 100%;
+    }
+}
